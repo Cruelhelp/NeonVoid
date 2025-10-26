@@ -1,0 +1,31 @@
+{
+  "name": "nexus-void-multiplayer",
+  "version": "3.0.0",
+  "description": "NEXUS VOID - Real-time multiplayer PvP space combat game with global chat and social features",
+  "main": "server-enhanced.js",
+  "scripts": {
+    "start": "node server-enhanced.js",
+    "dev": "nodemon server-enhanced.js",
+    "start:basic": "node server.js"
+  },
+  "keywords": [
+    "game",
+    "multiplayer",
+    "pvp",
+    "space",
+    "combat",
+    "socket.io"
+  ],
+  "author": "Ruel McNeil",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

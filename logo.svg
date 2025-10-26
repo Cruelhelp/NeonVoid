@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for glow effect -->
+    <linearGradient id="shipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FFD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00FFAA;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Low-Poly Triangle Ship - High Resolution -->
+  <g transform="translate(256, 256)" filter="url(#glow)">
+    <!-- Main ship body - large triangle -->
+    <polygon
+      points="120,0 -60,100 -20,0 -60,-100"
+      fill="none"
+      stroke="url(#shipGradient)"
+      stroke-width="8"
+      stroke-linejoin="miter"
+    />
+
+    <!-- Center line for depth -->
+    <line
+      x1="120" y1="0"
+      x2="-20" y2="0"
+      stroke="#00FFD4"
+      stroke-width="6"
+    />
+
+    <!-- Top wing detail -->
+    <polygon
+      points="120,0 60,-40 -20,0"
+      fill="none"
+      stroke="#00FFD4"
+      stroke-width="4"
+    />
+
+    <!-- Bottom wing detail -->
+    <polygon
+      points="120,0 60,40 -20,0"
+      fill="none"
+      stroke="#00FFD4"
+      stroke-width="4"
+    />
+
+    <!-- Engine glow (back) -->
+    <circle
+      cx="-50"
+      cy="0"
+      r="15"
+      fill="#00FFAA"
+      opacity="0.6"
+    />
+
+    <!-- Cockpit detail -->
+    <polygon
+      points="80,0 60,15 60,-15"
+      fill="#00FFD4"
+      opacity="0.8"
+    />
+
+    <!-- Wing edges for extra poly detail -->
+    <line x1="120" y1="0" x2="60" y2="-40" stroke="#00FFAA" stroke-width="3"/>
+    <line x1="120" y1="0" x2="60" y2="40" stroke="#00FFAA" stroke-width="3"/>
+    <line x1="60" y1="-40" x2="-60" y2="-100" stroke="#00FFD4" stroke-width="3"/>
+    <line x1="60" y1="40" x2="-60" y2="100" stroke="#00FFD4" stroke-width="3"/>
+  </g>
+</svg>

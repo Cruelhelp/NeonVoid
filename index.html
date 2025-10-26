@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>NEON VOID - Ultimate 3D Space Combat Experience</title>
+   <meta name="description" content="Experience the ultimate AAA 3D space combat game with multiplayer battles, ship customization, and intense asteroid warfare. Built with cutting-edge web technology.">
+   <link rel="icon" type="image/svg+xml" href="logo.svg">
+   <link rel="stylesheet" href="landing-style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- Low-Poly Geometric Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!-- Header Navigation -->
+   <header class="header">
+      <nav class="nav-container">
+         <div class="logo-container">
+            <img src="logo.svg" alt="NEON VOID" class="logo" width="60" height="60">
+            <div class="logo-text-container">
+               <span class="logo-text">NEON VOID</span>
+               <span class="logo-tagline">LOW-POLY 3D SPACE COMBAT</span>
+            </div>
+         </div>
+         <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#gameplay">Gameplay</a></li>
+            <li><a href="#leaderboard">Leaderboard</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="game.html" class="btn-play">PLAY NOW</a></li>
+         </ul>
+         <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+      </nav>
+   </header>
+
+   <!-- Hero Section -->
+   <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+         <h1 class="hero-title">
+            <span class="title-line">NEON</span>
+            <span class="title-line">VOID</span>
+         </h1>
+         <p class="hero-subtitle">Low-Poly 3D Space Combat</p>
+         <div class="hero-cta">
+            <a href="game.html" class="btn btn-primary">
+               <span>START MISSION</span>
+               <div class="btn-glow"></div>
+            </a>
+         </div>
+      </div>
+
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-copyright">by Ruel McNeil</div>
+   </section>
+
+   <!-- Features Section -->
+   <section id="features" class="features">
+      <div class="container">
+         <h2 class="section-title">BATTLE-READY FEATURES</h2>
+         <div class="features-grid">
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <svg viewBox="0 0 100 100" width="60" height="60">
+                     <polygon points="50,10 90,50 50,90 10,50" fill="none" stroke="#00ffff" stroke-width="3"/>
+                     <polygon points="50,30 70,50 50,70 30,50" fill="#00ffff" opacity="0.5"/>
+                  </svg>
+               </div>
+               <h3>Custom 3D Renderer</h3>
+               <p>Pure software 3D rendering engine built from scratch. No libraries, just raw performance.</p>
+            </div>
+
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <svg viewBox="0 0 100 100" width="60" height="60">
+                     <rect x="20" y="20" width="60" height="60" fill="none" stroke="#00ff88" stroke-width="3"/>
+                     <circle cx="50" cy="50" r="20" fill="#00ff88" opacity="0.5"/>
+                  </svg>
+               </div>
+               <h3>Ship Customization</h3>
+               <p>6 unique ship types with distinct stats. 10+ color schemes. Find your perfect combat style.</p>
+            </div>
+
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <svg viewBox="0 0 100 100" width="60" height="60">
+                     <polygon points="50,20 80,80 20,80" fill="none" stroke="#0088ff" stroke-width="3"/>
+                     <polygon points="50,40 65,70 35,70" fill="#0088ff" opacity="0.5"/>
+                  </svg>
+               </div>
+               <h3>Multiplayer PvP</h3>
+               <p>1v1 duels with real-time multiplayer. Challenge players worldwide and prove your skill.</p>
+            </div>
+
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <svg viewBox="0 0 100 100" width="60" height="60">
+                     <polygon points="30,30 70,30 85,50 70,70 30,70 15,50" fill="none" stroke="#ff8800" stroke-width="3"/>
+                     <polygon points="40,40 60,40 70,50 60,60 40,60 30,50" fill="#ff8800" opacity="0.5"/>
+                  </svg>
+               </div>
+               <h3>Progressive Levels</h3>
+               <p>10 challenging levels with increasing difficulty. Enemy AI becomes more aggressive each level.</p>
+            </div>
+
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <svg viewBox="0 0 100 100" width="60" height="60">
+                     <circle cx="50" cy="50" r="30" fill="none" stroke="#ff00ff" stroke-width="3"/>
+                     <path d="M 50 20 L 50 50 L 70 60" stroke="#ff00ff" stroke-width="3" fill="none"/>
+                  </svg>
+               </div>
+               <h3>Real-Time Stats</h3>
+               <p>Track your performance with detailed HUD. Health bars, score tracking, and level progression.</p>
+            </div>
+
+            <div class="feature-card">
+               <div class="feature-icon">
+                  <svg viewBox="0 0 100 100" width="60" height="60">
+                     <polygon points="50,10 95,30 95,70 50,90 5,70 5,30" fill="none" stroke="#00ffff" stroke-width="3"/>
+                     <polygon points="50,30 75,42 75,58 50,70 25,58 25,42" fill="#00ffff" opacity="0.5"/>
+                  </svg>
+               </div>
+               <h3>Global Leaderboard</h3>
+               <p>Compete for the top spot. View rankings, stats, and challenge the best players.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Leaderboard Section -->
+   <section id="leaderboard" class="leaderboard-section">
+      <div class="container">
+         <h2 class="section-title">TOP PILOTS</h2>
+         <div class="leaderboard-container">
+            <div class="leaderboard-tabs">
+               <button class="tab-btn active" data-tab="daily">Daily</button>
+               <button class="tab-btn" data-tab="weekly">Weekly</button>
+               <button class="tab-btn" data-tab="alltime">All Time</button>
+            </div>
+            <div class="leaderboard-content">
+               <table class="leaderboard-table">
+                  <thead>
+                     <tr>
+                        <th>Rank</th>
+                        <th>Pilot</th>
+                        <th>Score</th>
+                        <th>Level</th>
+                        <th>Ship</th>
+                     </tr>
+                  </thead>
+                  <tbody id="leaderboard-body">
+                     <!-- Populated by JavaScript -->
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Footer -->
+   <footer class="footer">
+      <div class="container">
+         <div class="footer-content">
+            <div class="footer-section">
+               <h4>NEON VOID</h4>
+               <p>The ultimate 3D space combat experience, built with passion and code.</p>
+            </div>
+            <div class="footer-section">
+               <h4>Quick Links</h4>
+               <ul>
+                  <li><a href="game.html">Play Game</a></li>
+                  <li><a href="#features">Features</a></li>
+                  <li><a href="#leaderboard">Leaderboard</a></li>
+               </ul>
+            </div>
+            <div class="footer-section">
+               <h4>Legal</h4>
+               <ul>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="terms.html">Terms of Service</a></li>
+                  <li><a href="#">Contact</a></li>
+               </ul>
+            </div>
+            <div class="footer-section">
+               <h4>Connect</h4>
+               <p>Join the community and stay updated on new features and events.</p>
+               <div class="footer-social">
+                  <a href="#">Discord</a>
+                  <a href="#">Twitter</a>
+                  <a href="#">GitHub</a>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <p>&copy; 2025 NEON VOID. Developed by Ruel McNeil. All rights reserved.</p>
+         </div>
+      </div>
+   </footer>
+
+   <script src="wireframe-bg.js"></script>
+   <script src="landing-script.js"></script>
+</body>
+</html>
